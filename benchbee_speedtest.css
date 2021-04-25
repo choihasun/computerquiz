@@ -1,0 +1,160 @@
+﻿/* benchbee speedtest css */
+/* =common
+------------------------------------------------------------------------*/
+@import url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css");
+*{ margin:0; padding:0;
+	font-family: 'Nanum Gothic', 나눔고딕 !important; }
+div{ font-size:0; }
+img { border: none; }
+/* body */
+body {
+	font-size:13px;
+	line-height:160%;
+}
+.homebgcolor{ background-color:#1c1e1f; }
+a:link, a:visited, a:active, a:hover  { text-decoration:none; }
+nav ul, li{
+list-style:none;
+}
+pre{
+    width:100%;
+    overflow:hidden;
+    word-break:break-all;
+    word-break:break-word;
+    line-height:21px;
+    white-space: pre-wrap;       /* CSS 3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+
+}
+/* =content
+------------------------------------------------------------------------*/
+/* TOP */
+.bn_top{ position:absolute; width:100%; }
+.top_wrap{ text-align:center; }
+.p_title_black{ color:#43b5ff; font-size:24px; line-height: 140%; font-weight:bold; letter-spacing:-1px; display:inline-block; }
+.underline_black{ clear:both; background-color:#282828; height:1px; margin-bottom:9px; }
+
+/* 벤치비로고 */
+.top_wrap_02{ text-align:center;  height:48px; background-color:#192a3f; }
+.top_wn{ margin:0 auto; text-align:left;  width:970px; height:48px; }
+.bnmenu_wrap{ text-align:left; width:970px; height:48px; display:inline-block; }
+.bnlogo{ width:253px; height:26px; margin-top:11px; float:left; }
+.beta_icons{ display:inline-block; width:52px; height:17px; margin-top:5px; margin-left:5px; vertical-align:top; }
+
+/* GNB메뉴 */
+.menu_btn{ float:right; height:48px; }
+.menu_txt{ color:#FFFFFF; font-size:15px; margin-top:13px; font-weight:bold; }
+.menu_nrml{ width:140px; height:48px; text-align:center; cursor: pointer; display:inline-block;  position:relative; }
+.menu_activ{ width:140px; height:48px; text-align:center; background-color:#2c82be; position:relative; cursor: pointer; display:inline-block; }
+a.menu_txt:link, a.menu_txt:visited, a.menu_txt:active, a.menu_txt:hover{ color:#FFFFFF; font-size:15px; margin-top:13px; text-decoration:none; }
+
+/* CENTER */
+.bn_bdcntr{ display:inline-block; width:100%; margin-top:43px; }
+.banner_wrap{ position:absolute; width:100%; }
+.ctt_wrap{ display:inline-block;  width:100%; z-index:1; }
+.center_wrap_02{ margin:0 auto; width:970px; position:relative; }
+.bn_content{ text-align:center; }
+.bn_title{ width:970px; height:66px; text-align:left; margin-top:30px; margin-bottom:23px; display:inline-block; }
+.p_name{ float:left; margin-bottom:3px; }
+.p_title{ color:#43b5ff; font-size:24px; line-height:140%; font-weight:bold; letter-spacing:-1px; display:inline-block; }
+.underline{ clear:both; background-color:#282828; height:1px; margin-bottom:9px; }
+.help_txt{ font-size:13px; color:#7b7b7b; line-height:100%; }
+.speed_test{ margin-top:0px; width:970px; height:600px; }
+.speed_test_core{ text-align:left; }
+.speed_test_core2{ margin:0 auto; }
+.left_banner{ display:inline-block; background-color:#181a1a; width:158px; height:598px; border:1px solid #27292a; }
+.spt_bg_box{ position:absolute; background-image:url(../images/speedtest_bg_03.png); width:592px; height:600px; position:relative; background-color:#15252f; margin-left:189px; text-align:center; }
+.right_banner{ display:inline-block; background-color:#181a1a; width:158px; height:598px; margin-left:650px; border:1px solid #27292a; }
+#sptestbtn{ cursor:pointer; }
+#sptstart_bt{ top:197px; left:209px; position:absolute; cursor:pointer; }
+#wrap_bt{ top:197px; left:209px; position:absolute; cursor:pointer; display:none; }
+.spt_sbtext{ position:absolute; font-size:22px; color:#ffffff; top:277px; left:253px; cursor:pointer; }
+
+/* 하단벤치비로고 */
+.bottom_nav{ display:inline-block; height:227px;  width:100%; background-color:#151515; margin-top:56px; }
+.bttm_wrap{ margin:0 auto; width:970px; padding-top:32px; }
+.bt_line{ background-color:#1a1a1a; height:1px;  }
+.bttm_contet_content{ width:970px; display:inline-block; }
+.adress_wrap{ float:left; }
+.bttm_addtxt{ display:block; font-size:13px; color:#525252; }
+.bn_adress{ margin-top:4px; margin-bottom:4px; }
+
+/* 추가 by riche */
+/* form error message */
+span.error {
+	display:inline-block;
+	padding-left:5px;
+ 	font-size:12px;
+	color:#d80100;
+}
+div.error {
+ 	font-size:12px;
+	color:#d80100;
+}
+.error-class {
+	color:#d80100;
+}
+.valid-class {
+	color:#032d3a;
+}
+.error-class.QueryBox {
+	border-color:#d80100;
+}
+
+/* ISP_상품선택 */
+#led_btani{ top:197px; left:209px; position:absolute; }
+.ipprd{ display:inline-block; padding-left:23px; padding-right:23px; padding-top:12px; padding-bottom:7px; text-align:center;  margin-top:95px; border-radius:6px; background-color:#101d27; }
+.isp_txt{ display:inline-block; font-size:16px; color:#ffffff; }
+.divsl_txt{ display:inline-block; font-size:12px; color:#858484; margin-left:12px; margin-right:12px; }
+.ipadrs{ display:inline-block; font-size:16px; color:#ffffff; }
+.notisp_txt{ display:block; height:0px; }
+.prdt_wrap{ display:inline-block; margin-top:272px; text-align:left; }
+.prdt_txt{ display:block; font-size:16px; color:#ffffff; /*color:#69747a;*/ }
+.selt_prdt{ display:block; margin-top:6px; }
+.seltprdt_box{ text-align:center; display:inline-block; width:68px; height:61px; vertical-align:top;
+			 border:1px solid #2e373d;
+			 background-color:#111f2a;
+			 border-radius:6px;
+			 -webkit-border-radius:6px;
+			 -moz-border-radius:6px;
+ }
+.seltprdt_box_02{ text-align:center; display:inline-block; width:68px; height:61px; vertical-align:top;
+			 border:1px solid #1b7ff1;
+			 background-color:#1b7ff1;
+			 border-radius:6px;
+			 -webkit-border-radius:6px;
+			 -moz-border-radius:6px;
+ }
+.sltprdt_txt{ display:inline-block; font-size:14px; color:#ffffff; margin-top:18px; }
+.fide_box{ display:block; height:294px; border:1px solid #444444; background-color:#192a3f; text-align:left; }
+.fibtit_txt{ display:block; font-size:18px; color:#1f97d4; margin-top:27px; margin-left:30px;  font-weight:bold; }
+.star_box{ margin-left:30px; margin-top:7px; }
+.fibhlp_txt{ display:block; font-size:13px; color:#616974; margin-top:8px; margin-left:30px; }
+.fidebtn{ display:inline-block; background-color:#0273c9; width:154px; height:50px; margin-top:28px; }
+.fidsend{ display:block; font-size:16px; color:#ffffff; margin-top:14px; }
+.fide_ctbox{ width:753px; height:108px; padding:4px 4px 4px 4px;  font-size:14px; color:#000000; text-align:left; margin-top:6px; margin-left:30px; background-color:#dddfe2; line-height: 21px;}
+.bnlogo{ width:253px; height:26px; margin-top:11px; float:left; }
+
+/* 측정결과 */
+.brssuggest_wrap{ display: inline-block; height: 85px;  }
+.brsu_line{ background-color: #333333; width: 502px; height: 1px; margin-bottom: 16px; }
+.brsug_bx{ text-align: left;; }
+.brsug_btn{ display: inline-block; width: 142px; height: 49px; background-color: #145779; border-radius: 6px; vertical-align: top; text-align: center; }
+.brsug_txtbx{ display: inline-block; margin-left: 25px; margin-top: 4px; vertical-align: top; }
+.brsug_btitle{ font-weight:bold; font-size: 20px; color: #ffffff; letter-spacing: -1px; }
+.brsug_stitle{ display: block; font-size: 15px; color: #5c5c5c; letter-spacing: -1px; }
+.brsug_txt{ display: inline-block; font-size: 15px; color: #ffffff; letter-spacing: -2px; margin-top: 14px; }
+
+/* 익명의견 */
+.feedbkt_iry{ width:968px; height:292px; border:1px solid #444444; background-color:#192a3f; margin-top:74px; margin-bottom:75px; }
+.feedback_wrap{ margin:0 auto; width:714px; margin-top:60px; }
+.inlines{ display:inline-block; zoom:1; *display:inline; }
+.mail_icon{ margin-top:8px; }
+.feedbkt_txt{ vertical-align:top; text-align:left; margin-left:38px; display:inline-block; margin-top:34px; }
+.feedbkt_01{ color:#00ccff; font-size:34px; line-height: 140%;  display:block; font-weight:bold; letter-spacing:-1px; }
+.feedbkt_02{ width:416px; color:#7f9cc5; font-size:16px; line-height: 140%; display:inline-block; margin-top:6px; }
+
+.help_txt_02{ font-size:13px; color:#ffffff; line-height:100%; }

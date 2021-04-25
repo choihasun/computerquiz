@@ -1,0 +1,159 @@
+﻿/* GNB 글로벌 메뉴 버튼 */
+ $(function() {	
+ 	var $oe_menu		= $('#oe_menu');
+	var $oe_menu_items	= $oe_menu.children('li');
+ 	var $sptestbtn		= $('#sptestbtn');
+	
+	var exp_show = 1;
+	
+	$oe_menu_items.bind('mouseenter',function(){
+	var $this = $(this);
+	$this.addClass('slided selected');
+	$this.css({
+		"background-color" : "#1b7be8"
+		});
+	$this.children('ul').css({
+			"opacity" : "1"
+		});
+		$this.children('ul').css('z-index','9999').stop(true,true).slideDown(200,function(){
+						$oe_menu_items.not('.slided').children('ul').hide();
+						$this.removeClass('slided');
+					});			
+				}).bind('mouseleave',function(){
+					var $this = $(this);
+					$this.css({
+							"background-color" : "#192a3f"
+					});
+					$this.children('ul').css({
+							"opacity" : "0",
+							"display" : "none"
+					});			
+	});
+	
+				
+	$sptestbtn.bind('mouseenter',function(){
+		$('#wrap_bt').stop(true,true).fadeTo(200, 1);
+		
+
+		}).bind('mouseleave',function(){
+			$('#wrap_bt').stop(true,true).fadeTo(200, 0);
+			//$(window).load(function(){ $('#wrap_bt').show();
+				//$('.help_square').style.display = 'none';
+				$('.help_square').css('display','none');
+	});	
+	
+	
+	
+		// 클로즈_탭설명
+		 $(".close_helptab > a").bind('click',function(){ 
+
+										 /*
+					 var helptab = $(".center_wrap_02");//$(this).parents(".center_wrap_02");
+					 			 if(helptab.hasClass("open")){
+								 console.log("1");
+								 				 			 	$('.help_wrap').css({
+																																		 "display" : "inline-block"
+																																		 				 					   });	
+																                         helptab.removeClass("open");
+																												 						 $(".close_helptab a span").text("닫기");
+																																		 								   	
+																																		 				}else{	
+								 console.log("2");
+																																										
+																																										$('.help_wrap').css({
+																																																												"display" : "none"
+																																																																 					   });	
+																																														helptab.addClass("open");
+																																																		$(".close_helptab a span").text("펼쳐보기");
+																																																						}
+									*/
+			
+			 //var helptab = $(this).parents(".help_wrap");
+			 //if(helptab.hasClass("open")){
+			 if(exp_show == 0) {
+			 	//console.log("1");
+				 			//$('.help_wrap').css({'height':'374px','margin-top':'26px','text-align':'left','display':'inline-block','margin':'0 auto','width':'970px'});
+							$('#help_exp').show();
+							//$('.help_square').show();
+              //helptab.removeClass("open");
+						 //$(".center_wrap_02 .close_helptab a span").text("닫기");
+						 $(".close_helptab a span").text("닫기");
+
+						 exp_show = 1;
+								   	
+				} else {	
+			 	//console.log("2");
+				
+					//$('.help_wrap').css({'dispaly':'none'});
+					$('#help_exp').hide();
+					//helptab.addClass("open");
+					//$(".center_wrap_02 .close_helptab a span").text("펼쳐보기");
+					$(".close_helptab a span").text("펼쳐보기");
+					
+					exp_show = 0;
+					}
+			 
+        });
+	
+	
+	/* button_animation */
+	function animate(){
+        $('#led_btani').fadeIn(1100).delay(1100).fadeOut(1100);
+    }
+    animate();  
+    setInterval(animate, 1100);
+});
+
+/* 롤링공지 */
+function fn_article3(containerID, autoStart){
+	var $element = $('#'+containerID).find('.notice-list');
+	var autoPlay = autoStart;
+	var auto = null;
+	var speed = 7000
+	var timer = null;
+
+	var move = $element.children().outerHeight();
+	var first = false;
+	var lastChild;
+
+	lastChild = $element.children().eq(-1).clone(true);
+	lastChild.prependTo($element);
+	$element.children().eq(-1).remove();
+
+	if($element.children().length==1){
+		$element.css('top','0px');
+	}else{
+		$element.css('top','-'+move+'px');
+	}
+
+	if(autoPlay){
+		timer = setInterval(moveNextSlide, speed);
+		auto = true;
+	}
+
+	$element.find('>li').bind({
+		'mouseenter': function(){
+			if(auto){
+				clearInterval(timer);
+			}
+		},
+		'mouseleave': function(){
+			if(auto){
+				timer = setInterval(moveNextSlide, speed);
+			}
+		}
+	});
+
+	function moveNextSlide(){
+		$element.each(function(idx){
+
+			var firstChild = $element.children().filter(':first-child').clone(true);
+			firstChild.appendTo($element.eq(idx));
+			$element.children().filter(':first-child').remove();
+			$element.css('top','0px');
+
+			$element.eq(idx).animate({'top':'-'+move+'px'},'normal');
+
+		});
+	}
+}
